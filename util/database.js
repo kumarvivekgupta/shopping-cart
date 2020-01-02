@@ -28,10 +28,10 @@
 
 let _db;
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://vivekg:vivekg@clustermongodb-546aj.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://vivekg:vivekg@clustermongodb-546aj.mongodb.net/shop?retryWrites=true";
 const client = new MongoClient(uri, { useNewUrlParser: true , useUnifiedTopology: true });
 const mongoConnect=callback=>{client.connect(err => {
-  const collection = client.db("test").collection("devices");
+ 
   console.log('!CONNECTed',client);
   // perform actions on the collection object
   // client.close();

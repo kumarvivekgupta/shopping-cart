@@ -10,7 +10,8 @@ class Product {
     this.imageUrl=imageUrl;
   }
   save(){
-const db=getDb;
+const db=getDb();
+console.log(db);
 db.collection('products').insertOne(this).then(result=>{
 console.log(result);
 }).catch(err=>{
